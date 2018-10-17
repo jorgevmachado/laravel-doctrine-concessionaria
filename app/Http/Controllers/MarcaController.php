@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Repository\CategoriaRepository;
-use App\RepositoryFilter\CategoriaFilter;
+use App\Repository\MarcaRepository;
+use App\RepositoryFilter\MarcaFilter;
 use Illuminate\Http\Request;
 
-class CategoriaController extends Controller
+
+class MarcaController extends Controller
 {
-    /** @var CategoriaRepository */
+    /** @var MarcaRepository */
     protected $repository;
 
-    public function __construct(CategoriaRepository $repository)
+    public function __construct(MarcaRepository $repository)
     {
         parent::__construct();
         $this->repository = $repository;
@@ -20,7 +21,7 @@ class CategoriaController extends Controller
     public function index(Request $request)
     {
         $payload = array_merge($this->getPayloadData($request));
-        $filter = new CategoriaFilter($payload);
+        $filter = new MarcaFilter($payload);
         return $this->repository->paginateByFilter($filter, true);
     }
 

@@ -13,4 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::resource('veiculo', 'VeiculoController');
 Route::resource('categoria', 'CategoriaController');
+Route::resource('marca', 'MarcaController');
+Route::resource('tipo-veiculo', 'TipoVeiculoController');

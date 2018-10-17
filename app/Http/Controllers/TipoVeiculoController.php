@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Repository\CategoriaRepository;
-use App\RepositoryFilter\CategoriaFilter;
+use App\Repository\TipoVeiculoRepository;
+use App\RepositoryFilter\TipoVeiculoFilter;
 use Illuminate\Http\Request;
 
-class CategoriaController extends Controller
+
+class TipoVeiculoController extends Controller
 {
-    /** @var CategoriaRepository */
+    /** @var TipoVeiculoRepository */
     protected $repository;
 
-    public function __construct(CategoriaRepository $repository)
+    public function __construct(TipoVeiculoRepository $repository)
     {
         parent::__construct();
         $this->repository = $repository;
@@ -20,7 +21,7 @@ class CategoriaController extends Controller
     public function index(Request $request)
     {
         $payload = array_merge($this->getPayloadData($request));
-        $filter = new CategoriaFilter($payload);
+        $filter = new TipoVeiculoFilter($payload);
         return $this->repository->paginateByFilter($filter, true);
     }
 

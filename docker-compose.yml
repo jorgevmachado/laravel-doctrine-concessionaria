@@ -1,0 +1,30 @@
+version: '3.5'
+services:
+  laravel-doctrine-concessionaria:
+    image: leonnleite/php-dev-oci:7.1-apache
+    container_name: laravel-doctrine-concessionaria
+    ports:
+    - 88:80
+    volumes:
+    - .:/var/www/html/ecptec-api
+    - ./config/apache.conf:/etc/apache2/sites-enabled/000-default.conf
+    - ./config/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    networks:
+    - laravel-doctrine-concessionaria
+    depends_on:
+    - bd_concessionaria
+  ecptec-db:
+    image: mysql
+    container_name: bd_concessionaria
+    restart: always
+    ports:
+    - 3306:3306
+    environment:
+      MYSQL_PASSWORD: root
+      MYSQL_USER: root
+    networks:
+    - laravel-doctrine-concessionaria
+networks:
+  ecptec:
+    driver: bridge
+    name: 'laravel-doctrine-concessionaria.network'

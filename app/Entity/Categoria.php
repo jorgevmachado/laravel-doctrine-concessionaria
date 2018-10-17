@@ -32,14 +32,4 @@ class Categoria
     {
         $this->descricaoCategoria = $descricaoCategoria;
     }
-
-    public static function createCategoria($descricaoCategoria)
-    {
-        return (new self($descricaoCategoria));
-    }
-
-
-
-
-
 }

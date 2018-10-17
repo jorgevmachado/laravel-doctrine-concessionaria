@@ -103,7 +103,10 @@ Para Criar as Seeds no Banco de dados
 Para Recarregar o projeto
 
     composer dump-autoload
+
+Para gerar Proxies
     
+    php artisan doctrine:generate:proxies    
     
 #Versoes
 

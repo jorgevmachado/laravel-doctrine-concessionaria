@@ -20,57 +20,23 @@ class CategoriaSeeder extends Seeder
 
     public function run()
     {
-        $categoria1 = \App\Entity\Categoria::createCategoria(
-            'ENTRADA'
-        );
-        $categoria2 = \App\Entity\Categoria::createCategoria(
-            'HATCH PEQUENO'
-        );
-        $categoria3 = \App\Entity\Categoria::createCategoria(
-            'HATCH MÉDIO'
-        );
-        $categoria4 = \App\Entity\Categoria::createCategoria(
-            'SEDANS PEQUENO'
-        );
-        $categoria5 = \App\Entity\Categoria::createCategoria(
-            'SEDANS COMPACTOS'
-        );
-        $categoria6 = \App\Entity\Categoria::createCategoria(
-            'SEDANS MÉDIO'
-        );
-        $categoria7 = \App\Entity\Categoria::createCategoria(
-            'SEDANS GRANDES'
-        );
-        $categoria8 = \App\Entity\Categoria::createCategoria(
-            'SUV'
-        );
-        $categoria9 = \App\Entity\Categoria::createCategoria(
-            'SW MÉDIO'
-        );
-        $categoria10 = \App\Entity\Categoria::createCategoria(
-            'SW GRANDE'
-        );
-        $categoria11 = \App\Entity\Categoria::createCategoria(
-            'MONOCAB'
-        );
-        $categoria12 = \App\Entity\Categoria::createCategoria(
-            'GRANCAB'
-        );
-        $categoria13 = \App\Entity\Categoria::createCategoria(
-            'SPORTS'
-        );
-        $categoria14 = \App\Entity\Categoria::createCategoria(
-            'PICK-UPS PEQUENOS'
-        );
-        $categoria15 = \App\Entity\Categoria::createCategoria(
-            'PICK-UPS GRANDES'
-        );
-        $categoria16 = \App\Entity\Categoria::createCategoria(
-            'FURGÕES'
-        );
-        $categoria17 = \App\Entity\Categoria::createCategoria(
-            'FURGÕES PEQUENOS'
-        );
+        $categoria1 = new \App\Entity\Categoria('ENTRADA');
+        $categoria2 = new  \App\Entity\Categoria('HATCH PEQUENO');
+        $categoria3 = new \App\Entity\Categoria('HATCH MÉDIO');
+        $categoria4 = new \App\Entity\Categoria('SEDANS PEQUENO');
+        $categoria5 = new \App\Entity\Categoria('SEDANS COMPACTOS');
+        $categoria6 = new \App\Entity\Categoria('SEDANS MÉDIO');
+        $categoria7 = new \App\Entity\Categoria('SEDANS GRANDES');
+        $categoria8 = new \App\Entity\Categoria('SUV');
+        $categoria9 = new \App\Entity\Categoria('SW MÉDIO');
+        $categoria10 = new \App\Entity\Categoria('SW GRANDE');
+        $categoria11 = new \App\Entity\Categoria('MONOCAB');
+        $categoria12 = new \App\Entity\Categoria('GRANCAB');
+        $categoria13 = new \App\Entity\Categoria('SPORTS');
+        $categoria14 = new \App\Entity\Categoria('PICK-UPS PEQUENOS');
+        $categoria15 = new \App\Entity\Categoria('PICK-UPS GRANDES');
+        $categoria16 = new \App\Entity\Categoria('FURGÕES');
+        $categoria17 = new \App\Entity\Categoria('FURGÕES PEQUENOS');
 
         $this->repository->add($categoria1);
         $this->repository->add($categoria2);
